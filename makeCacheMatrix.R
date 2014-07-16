@@ -1,3 +1,5 @@
+# This code creates an object that can hold both a matrix and a cached value for its inverse.
+
 makeCacheMatrix <- function(x = numeric()) {
   inv <- NULL
   set <- function(y) {

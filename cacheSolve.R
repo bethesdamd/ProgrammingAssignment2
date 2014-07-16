@@ -1,4 +1,7 @@
-# Note to self, here's an example of creating an invertible matrix:
+# This code will return a cached value for the inverse of the matrix, or, if no cached
+# value exists, it will compute it, cache and return it.
+
+# Here's an example of creating an invertible matrix:
 # m <- rbind(c(1,2), c(2,1))
 
 cacheSolve <- function(x, ...) {
