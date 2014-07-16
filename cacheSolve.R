@@ -1,14 +1,14 @@
-# Note to self, here's how to create an invertible matrix:
+# Note to self, here's an example of creating an invertible matrix:
 # m <- rbind(c(1,2), c(2,1))
 
 cacheSolve <- function(x, ...) {
-  m <- x$getmean()
-  if(!is.null(m)) {
+  inv <- x$getinverse()
+  if(!is.null(inv)) {
     message("getting cached data")
-    return(m)
+    return(inv)
   }
   data <- x$get()
-  m <- mean(data, ...)
-  x$setmean(m)
-  m
+  inv <- solve(data, ...)
+  x$setinverse(inv)
+  inv
 }
